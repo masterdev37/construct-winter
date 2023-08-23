@@ -1,0 +1,39 @@
+description = "Почему мы?"
+==
+	<section class="s-why" id="s-why">
+		<div class="container">
+			<div class="why-row">
+
+				<div class="why-left">
+					<h2 class="def-title">{{ this.theme.why_title }}</h2>
+					<div class="def-desc">
+						{{ this.theme.why_desc }}
+					</div>
+	
+					<div class="why-features">
+
+						{% for why in this.theme.why_list %}
+							<div class="why-features-item">
+								<div class="why-features-icon">
+									<img src="{{ 'assets/images/check-mark.svg' | theme }}" alt="Check mark">
+								</div>
+		
+								<div class="why-features-right">
+									<div class="why-features-title">{{ why.why_list_title }}</div>
+									<div class="why-features-desc">
+										{{ why.why_list_desc }}
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+	
+					</div>
+				</div>
+
+				<div class="why-right">
+					<img src="{{ this.theme.why_image | media }}" alt="Почему мы?">
+				</div>
+				
+			</div>
+		</div>
+	</section>

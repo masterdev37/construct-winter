@@ -1,0 +1,9 @@
+description = "Партнеры"
+==
+	<section class="s-partners" id="s-partners">
+		<div class="partners-row">
+			{% for partners in this.theme.partners_loop %}
+				<div class="partners-item"><img src="{{ partners.partners_item_image | media }}"></div>
+			{% endfor %}
+		</div>
+	</section>

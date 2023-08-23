@@ -1,0 +1,122 @@
+description = "Шапка"
+==
+	
+
+	<div class="modal-form mfp-hide mfp-with-anim" id="modal-form">
+
+		<div class="modal-form-head">
+			<div class="modal-form-logo">
+				<img src="{{ this.theme.logo_header | media }}" alt="Construction">
+			</div>
+			<div class="modal-form-close">
+				<img src="{{ 'assets/images/close.svg' | theme }}" alt="Close">
+			</div>
+		</div>
+
+		<div class="modal-form-body">
+			<div class="modal-form-title">Заказать звонок</div>
+			<form data-request="{{ contactForm }}::onFormSubmit">
+				{{ form_token() }}
+				<div id="{{ contactForm }}_forms_flash"></div>
+				<input id="service-name" type="hidden" name="Название услуги" value="">
+				<input type="text" placeholder="Ваше имя*" name="Имя" required>
+				<input type="text" placeholder="Ваше телефон*" name="Телефон" required>
+				<button class="form-button">Отправить</button>
+			</form>
+		</div>
+
+	</div>
+	
+	<header class="site-header">
+		<div class="header-top">
+			<div class="container">
+				<div class="header-row">
+
+					<!-- Header top mobile START -->
+					<div class="header-mobile-logo">
+						<a href="#">
+							<img src="{{ this.theme.logo_header | media }}" alt="Construction">
+						</a>
+					</div>
+
+					<div class="hamburger">
+						<span></span>
+						<span></span>
+					</div>
+					<!-- Header top mobile END -->
+
+					<div class="header-desc">{{ this.theme.company_activiy }}</div>
+					<div class="header-right">
+						<div class="header-info">
+							<img src="{{ 'assets/images/location.svg'|theme }}" alt="{{ this.theme.address }}">
+							<span>{{ this.theme.address }}</span>
+						</div>
+						<a href="tel:{{ this.theme.address }}" class="header-info">
+							<img src="{{ 'assets/images/phone.svg'|theme }}" alt="{{ this.theme.address }}">
+							<span>{{ this.theme.phone }}</span>
+						</a>
+
+						<div class="header-social">
+							{% for social in this.theme.social_networks %}
+								<a href="{{ social.social_link }}">
+									<img src="{{ social.social_icon | media }}" alt="Twitter">
+								</a>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-bottom">
+			<div class="container">
+				<div class="header-bottom-row">
+					<div class="header-logo">
+						<a href="/">
+							<img src="{{ this.theme.logo_header | media }}" alt="Construction">
+						</a>
+					</div>
+
+					<nav class="header-nav">
+						<ul>
+							{% for header_menu in this.theme.header_menu %}
+								<li><a class="anchor-link" href="{{ header_menu.header_menu_link }}">{{ header_menu.header_menu_name }}</a></li>
+							{% endfor %}
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Header mobile START -->
+		<div class="header-mobile-wrap">
+			<nav class="header-mobile-nav">
+				<ul>
+					{% for header_menu in this.theme.header_menu %}
+						<li><a href="{{ header_menu.header_menu_link }}">{{ header_menu.header_menu_name }}</a></li>
+					{% endfor %}
+				</ul>
+			</nav>
+
+			<div class="header-mobile-info">
+				<img src="{{ 'assets/images/location.svg'|theme }}" alt="{{ this.theme.address }}">
+				<span>{{ this.theme.address }}</span>
+			</div>
+			<a href="tel:+7 950 457 5654" class="header-mobile-info">
+				<img src="{{ 'assets/images/phone.svg'|theme }}" alt="{{ this.theme.address }}">
+				<span>{{ this.theme.phone }}</span>
+			</a>
+
+
+			<div class="header-mobile-social">
+				{% for social in this.theme.social_networks %}
+					<a href="{{ social.social_link }}">
+						<img src="{{ social.social_icon | media }}" alt="Twitter">
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+		<!-- Header mobile END -->
+
+	</header>

@@ -1,0 +1,21 @@
+description = "О нас"
+==
+	<section class="s-about" id="s-about">
+		<div class="container">
+
+			<div class="about-row">
+				<div class="about-left">
+					<h2 class="def-title">{{ this.theme.about_title }}</h2>
+					<div class="def-desc">
+						{{ this.theme.about_desc | raw }}
+					</div>
+					<a href="{{ this.theme.about_btn_link }}" data-effect="mfp-zoom-in" class="def-btn modal-btn">{{ this.theme.about_btn_text }}</a>
+				</div>
+	
+				<div class="about-right">
+					<img src="{{ this.theme.about_image | media }}" alt="О нас">
+				</div>
+			</div>
+
+		</div>
+	</section>

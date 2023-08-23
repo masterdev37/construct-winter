@@ -1,0 +1,25 @@
+description = "Сервисы"
+==
+	<section class="s-services" id="s-services">
+		<div class="container">
+			<h2 class="center-title">{{ this.theme.services_title }}</h2>
+
+			<div class="services-row">
+
+				{% for services in this.theme.services_loop %}
+					<div class="services-item">
+						<div class="services-thumb">
+							<img src="{{ services.services_item_image | media }}" alt="{{ services.services_title }}">
+						</div>
+						<div class="services-body">
+							<h4 class="services-title">{{ services.services_item_title }}</h4>
+							<a href="#modal-form" data-effect="mfp-zoom-in" class="def-btn services-btn modal-btn">{{ this.theme.services_btn_text }}</a>
+						</div>
+					</div>
+				{% endfor %}
+
+				
+
+			</div>
+		</div>
+	</section>

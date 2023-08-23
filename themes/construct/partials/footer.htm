@@ -1,0 +1,62 @@
+description = "Подвал"
+==
+	<footer class="site-footer">
+		<div class="container">
+
+			<div class="footer-row">
+
+				<div class="footer-left">
+					<div class="footer-logo">
+						<a href="#">
+							<img src="{{ this.theme.footer_logo | media }}" alt="Construction">
+						</a>
+					</div>
+					<div class="footer-desc">
+						{{ this.theme.footer_desc | raw }}
+					</div>
+				</div>
+
+				<div class="footer-right">
+					<nav class="footer-nav">
+						<h5 class="footer-title">Наши услуги</h5>
+						<ul>
+							{% for footer_services in this.theme.footer_services %}
+								<li><a class="anchor-link" href="{{ footer_services.footer_services_link }}">{{ footer_services.footer_services_name }}</a></li>
+							{% endfor %}
+						</ul>
+					</nav>
+
+					<div class="footer-nav">
+						<h5 class="footer-title">График работы</h5>
+						{{ this.theme.footer_schedule | raw }}
+					</div>
+
+					<div class="footer-nav">
+						<h5 class="footer-title">Контакты</h5>
+						<div class="footer-info-item">
+							<div class="footer-info-icon"><img src="{{ 'assets/images/location-gray.svg' | theme }}" alt="Локация"></div>
+							<div class="footer-info-text">{{ this.theme.address }}</div>
+						</div>
+						<a href="tel:{{ this.theme.phone }}" class="footer-info-item">
+							<div class="footer-info-icon"><img src="{{ 'assets/images/phone-gray.svg' | theme }}" alt="Телефон"></div>
+							<div class="footer-info-text">{{ this.theme.phone }}</div>
+						</a>
+
+						<div class="footer-social">
+							{% for social in this.theme.social_networks %}
+								<a href="{{ social.social_link }}">
+									<img src="{{ social.social_icon | media }}" alt="Twitter">
+								</a>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+
+			</div>
+			
+			<div class="footer-copyright">
+				<div class="copyright-text">Copyright © 2023 Construction. Все права защищены</div>
+			</div>
+
+		</div>
+	</footer>

@@ -1,0 +1,21 @@
+description = "Галерея"
+==
+	<section class="s-gallery" id="s-gallery">
+		<div class="container">
+			<div class="center-title">{{ this.theme.gallery_title }}</div>
+
+			<div class="gallery-wrap">
+				{% for gallery in this.theme.gallery_loop %}
+					<a href="{{ gallery.gallery_image | media }}" class="gallery-item" data-effect="mfp-zoom-in">
+						<span class="gallery-border"></span>
+						<img src="{{ gallery.gallery_image | media }}" alt="Изображение">
+					</a>
+				{% endfor %}
+			</div>
+
+			<div class="gallery-btn">
+				<a href="#" class="def-btn">Показать еще</a>
+			</div>
+			
+		</div>
+	</section>

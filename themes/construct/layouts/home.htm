@@ -1,0 +1,56 @@
+description = "Главная страница"
+
+[genericForm contactForm]
+group = "Контактная форма"
+messages_success = "Ваша форма была успешно отправлена!"
+messages_errors = "В вашей заявке содержатся ошибки."
+mail_recipients[] = "uverstki@gmail.com"
+reset_form = 1
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Construction - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="Uroki Verstki">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="Winter CMS">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/favicon.png'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/fonts/stylesheet.css'|theme }}">
+    	<link rel="stylesheet" href="{{ 'assets/css/swiper-bundle.min.css'|theme }}">
+    	<link rel="stylesheet" href="{{ 'assets/css/magnific-popup.min.css'|theme }}">
+    	<link rel="stylesheet" href="{{ 'assets/css/style.css'|theme }}">
+        {% styles %}
+    </head>
+    <body>
+
+        <!-- Header -->
+        {% partial 'header' %}
+        
+        <!-- Content -->
+        <main id="site-main">
+            {% page %}
+        </main>
+
+        <!-- Footer -->
+        {% partial 'footer' %}
+
+        <!-- Scripts -->
+        <script src="{{ 'assets/javascript/jquery-3.7.0.min.js'|theme }}"></script>
+    	<script src="{{ 'assets/javascript/swiper-bundle.min.js'|theme }}"></script>
+    	<script src="{{ 'assets/javascript/magnific-popup.min.js'|theme }}"></script>
+    	<script src="{{ 'assets/javascript/script.js'|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>

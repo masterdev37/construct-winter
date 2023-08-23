@@ -1,0 +1,294 @@
+name: Construction - Landing page
+description: 'Сайт для строительной компании'
+author: Uroki Verstki
+homepage: 'https://uroki-verstki.ru'
+code: ''
+
+form:
+  tabs:
+    fields:
+      company_activiy:
+        label: Вид деятельности
+        type: text
+        tab: Шапка
+      address:
+        label: Адрес
+        type: text
+        span: auto
+        tab: Шапка
+      phone:
+        label: Телефон
+        type: text
+        span: auto
+        tab: Шапка
+      social_networks:
+        label: Социальные сети
+        type: repeater
+        titleFrom: social_link
+        tab: Шапка
+        form:
+          fields:
+            social_icon:
+              label: Иконка
+              type: mediafinder
+              mode: image
+            social_link:
+              label: Ссылка на социальную сеть
+              type: text
+      logo_header:
+        label: Логотип
+        type: mediafinder
+        mode: image
+        tab: Шапка
+      header_menu:
+        label: Меню
+        type: repeater
+        titleFrom: header_menu_name
+        tab: Шапка
+        form:
+          fields:
+            header_menu_name:
+              label: Название
+              type: text
+            header_menu_link:
+              label: Ссылка
+              type: text
+      banner_slider:
+        label: Баннер
+        type: repeater
+        titleFrom: banner_title
+        tab: Баннер
+        form:
+          fields:
+            banner_image:
+              label: Фон
+              type: mediafinder
+              mode: image
+              tab: Баннер
+            banner_subtitle:
+              label: Подзаголовок
+              type: text
+              tab: Баннер
+            banner_title:
+              label: Заголовок
+              type: richeditor
+              tab: Баннер
+      banner_btn_text:
+        label: Текст кнопки
+        type: text
+        tab: Баннер
+      banner_btn_link:
+        label: Ссылка кнопки
+        type: text
+        tab: Баннер
+      about_title:
+        label: Заголовок
+        type: text
+        tab: О нас
+      about_desc:
+        label: Описание
+        type: richeditor
+        tab: О нас
+      about_btn_text:
+        label: Текст кнопки
+        type: text
+        tab: О нас
+      about_btn_link:
+        label: Ссылка кнопки
+        type: text
+        tab: О нас
+      about_image:
+        label: Изображение
+        type: mediafinder
+        mode: image
+        tab: О нас
+      numbers_title:
+        label: Заголовок
+        type: text
+        tab: Цифры
+      numbers_desc:
+        label: Описание
+        type: textarea
+        tab: Цифры
+      numbers_loop:
+        type: repeater
+        titleFrom: numbers_num_title
+        tab: Цифры
+        form:
+          fields:
+            numbers_num_item:
+              label: Цифра
+              type: text
+              tab: Цифры
+            numbers_num_title:
+              label: Заголовок
+              type: text
+              tab: Цифры
+      services_title:
+        label: Заголовок
+        type: text
+        tab: Услуги
+      services_loop:
+        type: repeater
+        titleFrom: services_item_title
+        tab: Услуги
+        form:
+          fields:
+            services_item_image:
+              label: Изображение
+              type: mediafinder
+              mode: image
+            services_item_title:
+              label: Заголовок
+              type: text
+      services_btn_text:
+        label: Текст кнопки
+        type: text
+        tab: Услуги
+      gallery_title:
+        label: Заголовок
+        type: text
+        tab: Галерея
+      gallery_loop:
+        type: repeater
+        tab: Галерея
+        form:
+          fields:
+            gallery_image:
+              label: Изображение
+              type: mediafinder
+              mode: image
+      why_title:
+        label: Заголовок
+        type: text
+        tab: Почему мы?
+      why_desc:
+        label: Описание
+        type: textarea
+        tab: Почему мы?
+      why_list:
+        type: repeater
+        tab: Почему мы?
+        form:
+          fields:
+            why_list_title:
+              label: Заголовок
+              type: text
+            why_list_desc:
+              label: Описание
+              type: textarea
+      why_image:
+        label: Изображение
+        type: mediafinder
+        mode: image
+        tab: Почему мы?
+      team_title:
+        label: Заголовок
+        type: text
+        tab: Команда
+      team_loop:
+        type: repeater
+        tab: Команда
+        titleFrom: team_item_name
+        form:
+          fields:
+            team_item_image:
+              label: Изображение
+              type: mediafinder
+              mode: image
+            team_item_profi:
+              label: Специализация
+              type: text
+            team_item_name:
+              label: ФИО
+              type: text
+      team_background:
+        label: Фон
+        type: mediafinder
+        mode: image
+        tab: Отзывы
+      reviews_title:
+        label: Заголовок
+        type: text
+        tab: Отзывы
+      reviews_loop:
+        label: Отзывы
+        type: repeater
+        tab: Отзывы
+        titleFrom: reviews_item_name
+        form:
+          fields:
+            reviews_item_image:
+              label: Изображение
+              type: mediafinder
+              mode: image
+            reviews_item_name:
+              label: ФИО
+              type: text
+            reviews_item_profi:
+              label: Специализация
+              type: text
+            reviews_item_desc:
+              label: Отзыв
+              type: textarea
+            reviews_social_link_vk:
+              label: Ссылка в Вконтакте
+              type: text
+            reviews_social_link_facebook:
+              label: Ссылка на Facebook
+              type: text
+            reviews_social_link_telegram:
+              label: Ссылка на Телеграм
+              type: text
+      partners_loop:
+        label: Партнеры
+        type: repeater
+        tab: Партнеры
+        form:
+          fields:
+            partners_item_image:
+              label: Изображение
+              type: mediafinder
+              mode: image
+      contacts_title:
+        label: Заголовок
+        type: text
+        tab: Контакты
+      contacts_desc:
+        label: Описание
+        type: textarea
+        tab: Контакты
+      contacts_image:
+        label: Изображение
+        type: mediafinder
+        mode: image
+        tab: Контакты
+      footer_logo:
+        label: Логотип
+        type: mediafinder
+        mode: image
+        tab: Подвал
+      footer_desc:
+        label: Описание
+        type: textarea
+        tab: Подвал
+      footer_services:
+        label: Услуги меню
+        type: repeater
+        tab: Подвал
+        form:
+          fields:
+            footer_services_name:
+              label: Название услуги
+              type: text
+            footer_services_link:
+              label: Ссылка
+              type: text
+      footer_schedule:
+        label: График работы
+        type: richeditor
+        tab: Подвал
+      footer_copyright:
+        label: Текст копирайт
+        type: text
+        tab: Подвал

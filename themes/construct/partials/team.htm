@@ -1,0 +1,24 @@
+description = "Наша команда"
+==
+	<section class="s-team" id="s-team">
+		<div class="container">
+			<h2 class="center-title">{{ this.theme.team_title }}</h2>
+
+			<div class="team-row">
+
+				{% for team in this.theme.team_loop %}
+					<div class="team-item">
+						<div class="team-thumb">
+							<img src="{{ team.team_item_image | media }}" alt="{{ team.team_item_name }}">
+						</div>
+						<div class="team-body">
+							<div class="team-profi">{{ team.team_item_profi }}</div>
+							<div class="team-name">{{ team.team_item_name }}</div>
+						</div>
+					</div>
+				{% endfor %}
+
+			</div>
+
+		</div>
+	</section>

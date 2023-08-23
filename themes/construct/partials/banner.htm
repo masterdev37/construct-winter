@@ -1,0 +1,30 @@
+description = "Баннер"
+==
+<section class="s-banner" id="s-banner">
+		
+		<div class="swiper banner-swiper">
+			
+			<div class="swiper-wrapper">
+				{% for banner in this.theme.banner_slider %}
+					<div class="swiper-slide" style="background-image: url({{ banner.banner_image | media }})">
+						<div class="banner-content">
+							<div class="banner-subtitle">{{ banner.banner_subtitle }}</div>
+							<h2 class="banner-title">{{ banner.banner_title | raw }}</h2>
+							<a href="{{ this.theme.banner_btn_link }}" class="banner-btn def-btn anchor-link">
+								{{ this.theme.banner_btn_text }}
+							</a>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+
+			<div class="swiper-pagination"></div>
+			
+			<div class="container">
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+		
+		</div>
+
+	</section>

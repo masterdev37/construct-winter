@@ -1,0 +1,31 @@
+description = "Форма"
+==
+	<section class="s-form" id="s-form">
+		<div class="container">
+			<div class="form-row">
+
+				<div class="form-left">
+					<h2 class="def-title">{{ this.theme.contacts_title }}</h2>
+					<div class="def-desc">
+						{{ this.theme.contacts_desc }}
+					</div>
+					<div class="form-image">
+						<img src="{{ this.theme.contacts_image | media }}" alt="Форма обратной связи">
+					</div>
+				</div>
+
+				<div class="form-right">
+					<form data-request="{{ contactForm }}::onFormSubmit">
+						{{ form_token() }}
+						<div id="{{ contactForm }}_forms_flash"></div>
+						<input type="text" placeholder="Ваше имя*" name="Имя" required>
+						<input type="text" placeholder="Ваше телефон*" name="Телефон" required>
+						<input type="text" placeholder="Ваше email" name="Email">
+						<textarea cols="30" rows="5" placeholder="Комментарий" name="Комментарий"></textarea>
+						<button class="def-btn form-button">Отправить</button>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</section>

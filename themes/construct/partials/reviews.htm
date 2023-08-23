@@ -1,0 +1,52 @@
+description = "Отзывы"
+==
+	<section class="s-reviews" id="s-reviews" style="background-image: url('{{ this.theme.reviews_background | media }}');">
+		<div class="container">
+			<h2 class="center-title color-white">{{ this.theme.reviews_title }}</h2>
+			
+			<div class="swiper reviews-swiper">
+				
+				<div class="swiper-wrapper">
+
+					{% for reviews in this.theme.reviews_loop %}
+						<div class="swiper-slide">
+							<div class="reviews-item">
+								<div class="reviews-thumb">
+									<img src="{{ reviews.reviews_item_image | media }}" alt="{{ reviews.reviews_item_name }}">
+								</div>
+	
+								<div class="reviews-body">
+									<div class="reviews-name">{{ reviews.reviews_item_name }}</div>
+									<div class="reviews-profi">{{ reviews.reviews_item_profi }}</div>
+									<div class="reviews-comment">
+										{{ reviews.reviews_item_desc }}
+									</div>
+									<div class="reviews-social">
+										{% if reviews.reviews_social_link_vk %}
+											<a href="{{ reviews.reviews_social_link_vk }}" target="_blank"><img src="{{ 'assets/images/social-vk-gray.svg' | theme }}" alt="Вконтакте"></a>
+										{% endif %}
+
+										{% if reviews.reviews_social_link_facebook %}
+											<a href="{{ reviews.reviews_social_link_facebook }}"><img src="{{ 'assets/images/social-facebook-gray.svg' | theme }}" alt="Facebook" target="_blank"></a>
+										{% endif %}
+
+										{% if reviews.reviews_social_link_telegram %}
+											<a href="{{ reviews.reviews_social_link_telegram }}"><img src="{{ 'assets/images/social-telegram-gray.svg' | theme }}" alt="Telegram" target="_blank"></a>
+										{% endif %}
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+
+					
+
+				</div>
+			
+				<div class="swiper-pagination"></div>
+			
+			</div>
+
+		</div>
+	</section>

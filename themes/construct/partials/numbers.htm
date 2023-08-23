@@ -1,0 +1,27 @@
+description = "Цифры"
+==
+	<section class="s-numbers" id="s-numbers">
+		<div class="container">
+			<div class="numbers-row">
+
+				<div class="numbers-left">
+					<h2 class="def-title color-white">{{ this.theme.numbers_title | raw }}</h2>
+					<div class="def-desc">
+						{{ this.theme.numbers_desc | raw }}
+					</div>
+				</div>
+
+				<div class="numbers-right">
+					{% for numbers in this.theme.numbers_loop %}
+						<div class="numbers-item">
+							<div class="numbers-num">{{ numbers.numbers_num_item }}</div>
+							<div class="numbers-desc">
+								{{ numbers.numbers_num_title | raw }}
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+
+			</div>
+		</div>
+	</section>
