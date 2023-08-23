@@ -3,7 +3,7 @@
 3. Нажмите на создать БД (с кодировкой utf8_general_ci или utf8mb4_general_ci)
 4. Теперь нажмите на базу данных которую создали, нажмите импорт -> загрузить файл (upload file) и выберите базу данных database.sql (находится в корневой папке)
 
-Административная панель
-construct-winter/backend
-Логин: urokiverstki
-Пароль: 0123456
+Административная панель <br>
+construct-winter/backend <br>
+Логин: urokiverstki <br>
+Пароль: 0123456 <br>
